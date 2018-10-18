@@ -63,19 +63,26 @@ div.sidebar {
 	float: right;
 	width: 150px;
 	margin: 30px;
-	font-style: italic;
-
+	color: rgb(50,50,50);
 }
 h1.sidebar {
     font-family: monospace;
     font-size: 18px;
     text-transform: uppercase;
     font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
 } 
 p.sidebar {
-	font-family: sans-serif;
+	font-family: Avantgarde;
 	font-size: 14px;
-	color: rgb(80,80,80);
+	text-align: justify;
+}
+.sidebarimg {
+	border-radius: 10px;
+	overflow: hidden;
 }
 /*-------------------------------------*/
 /*Footer CSS:*/
@@ -151,12 +158,14 @@ h2.blogdate {
 	height: 20px;
 	width: 490px;
 }
+ul.blogpostbar {
+	width: 100%;
+}
 li.blogli {
 	margin-top: 15px;
 	width: 49%;
-	display: inline-flex;
+	display: -webkit-inline-flex;
 	align-items: center;
-	justify-content: space-between;
 }
 a.blogel {
 	color: rgb(60,60,60);
@@ -166,7 +175,9 @@ a.blogel {
 	font-weight: bold;
 	font-family: monospace;
 }
-
+li.comment a.blogel {
+	-webkit-justify-content: space-around;
+}
 a.blogel:hover {
 	color: rgb(80,80,80);
 }
